@@ -4,6 +4,8 @@ A customized version of the Microsoft Report phishing button with a DALL-E gener
 
 Instead of the regular add-in URL, use this one to deploy the custom image Report Phishing Button: https://raw.githubusercontent.com/zarguell/ms-phishing/main/ReportPhishingAzure.xml
 
+Additionally, the report message button can be found here: https://raw.githubusercontent.com/zarguell/ms-phishing/main/ReportMessageAzure.xml
+
 For more details, see [here](https://learn.microsoft.com/en-us/microsoft-365/security/office-365-security/submissions-users-report-message-add-in-configure?view=o365-worldwide#get-the-report-message-or-the-report-phishing-add-ins-for-your-microsoft-365-gcc-or-gcc-high-organization).
 
 Currently includes assets of the following sizes:
