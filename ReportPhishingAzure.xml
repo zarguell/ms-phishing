@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
+  <!-- Begin Basic Settings: Add-in metadata, used for all versions of Office unless override provided. -->
+  <!-- IMPORTANT! Id must be unique for your add-in, if you reuse this manifest ensure that you change this id to a new GUID. -->
+  <Id>3F32746A-0586-4C54-B8CE-D3B611C5B6C8</Id>
+  <!--Version. Updates from the store only get triggered if there is a version change. -->
+  <Version>1.0.1.2</Version>
+  <ProviderName>Microsoft Corporation</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
+  <DisplayName DefaultValue="Report Phishing">
+    <Override Locale="ar-sa" Value="الإبلاغ عن تصيد احتيالي" />
+    <Override Locale="bg-bg" Value="Докладване за фишинг" />
+    <Override Locale="ca-es" Value="Informeu que és correu de pesca" />
+    <Override Locale="cs-cz" Value="Nahlásit útok phishing" />
+    <Override Locale="da-dk" Value="Rapportér phishing" />
+    <Override Locale="de-de" Value="Phishing melden" />
+    <Override Locale="el-gr" Value="Αναφορά ως Ηλεκτρονικό &quot;ψάρεμα&quot;" />
+    <Override Locale="en-gb" Value="Report Phishing" />
+    <Override Locale="es-es" Value="Informar sobre correo de phishing" />
+    <Override Locale="et-ee" Value="Andmepüügist teatamine" />
+    <Override Locale="eu-es" Value="Salatu phishinga" />
+    <Override Locale="fi-fi" Value="Ilmoita tietojenkalasteluyrityksestä" />
+    <Override Locale="fr-fr" Value="Signaler un hameçonnage" />
+    <Override Locale="gl-es" Value="Notificar suplantación de identidade" />
+    <Override Locale="he-il" Value="דווח על דיוג" />
+    <Override Locale="hi-in" Value="फ़िशिंग की रिपोर्ट करें" />
+    <Override Locale="hr-hr" Value="Prijavite krađu identiteta" />
+    <Override Locale="hu-hu" Value="Bejelentés adathalász üzenetként" />
+    <Override Locale="id-id" Value="Laporkan Pengelabuan" />
+    <Override Locale="it-it" Value="Segnala phishing" />
+    <Override Locale="ja-jp" Value="フィッシング詐欺の報告" />
+    <Override Locale="kk-kz" Value="Фишинг туралы есеп беру" />
+    <Override Locale="ko-kr" Value="피싱 신고" />
+    <Override Locale="lt-lt" Value="Pranešti apie sukčiavimą apsimetant" />
+    <Override Locale="lv-lv" Value="Ziņot par pikšķerēšanu" />
+    <Override Locale="ms-my" Value="Laporan Pemancingan" />
+    <Override Locale="nl-nl" Value="Rapporteren als phishing" />
+    <Override Locale="pl-pl" Value="Zgłoś wyłudzanie informacji" />
+    <Override Locale="pt-br" Value="Denunciar Phishing" />
+    <Override Locale="ro-ro" Value="Raportați ca phishing" />
+    <Override Locale="ru-ru" Value="Сообщить о фишинге" />
+    <Override Locale="sk-sk" Value="Nahlásiť neoprávnené získavanie údajov" />
+    <Override Locale="sl-si" Value="Prijavi lažno predstavljanje" />
+    <Override Locale="sr-cyrl-cs" Value="Пријави phishing" />
+    <Override Locale="sr-latn-cs" Value="Prijavljivanje phishing poruka" />
+    <Override Locale="sv-se" Value="Rapportera nätfiske" />
+    <Override Locale="th-th" Value="รายงานฟิชชิ่ง" />
+    <Override Locale="tr-tr" Value="Kimlik Avı Bildir" />
+    <Override Locale="uk-ua" Value="Повідомити про фішинг" />
+    <Override Locale="vi-vn" Value="Báo cáo lừa đảo" />
+    <Override Locale="zh-cn" Value="报告网络钓鱼" />
+    <Override Locale="zh-tw" Value="檢舉網路釣魚" />
+  </DisplayName>
+  <Description DefaultValue="Report phishing to help stop future attempts">
+    <Override Locale="ar-sa" Value="الإبلاغ عن التصيد الاحتيالي للمساعدة في إيقاف المحاولات المستقبلية" />
+    <Override Locale="bg-bg" Value="Докладвайте за фишинг, за да спрете бъдещите опити" />
+    <Override Locale="ca-es" Value="Informeu del correu de pesca de credencials per ajudar a aturar els intents futurs" />
+    <Override Locale="cs-cz" Value="Nahlaste útok phishing, abyste zabránili budoucím pokusům" />
+    <Override Locale="da-dk" Value="Rapportér phishing for at stoppe fremtidige forsøg" />
+    <Override Locale="de-de" Value="Melden von Phishing, um zukünftige Versuche zu verhindern" />
+    <Override Locale="el-gr" Value="Αναφέρετε το ηλεκτρονικό ψάρεμα για να διακόψετε μελλοντικές προσπάθειες" />
+    <Override Locale="en-gb" Value="Report phishing to help stop future attempts" />
+    <Override Locale="es-es" Value="Informar de la suplantación de identidad (phishing) para ayudar a detener futuras amenazas" />
+    <Override Locale="et-ee" Value="Teatage andmepüügist, et aidata edaspidised katsed peatada" />
+    <Override Locale="eu-es" Value="Salatu phishinga etorkizuneko saiakerak eteten laguntzeko" />
+    <Override Locale="fi-fi" Value="Ilmoita tietojenkalastelusta tulevien yritysten pysäyttämiseksi" />
+    <Override Locale="fr-fr" Value="Signaler l’hameçonnage pour arrêter les tentatives futures" />
+    <Override Locale="gl-es" Value="Notificar suplantación de identidade para deter tentativas futuras" />
+    <Override Locale="he-il" Value="דווח על דיוג כדי לעזור לעצור ניסיונות עתידיים" />
+    <Override Locale="hi-in" Value="भविष्य में प्रयास रोकने में मदद के लिए फ़िशिंग की रिपोर्ट करें" />
+    <Override Locale="hr-hr" Value="Prijavite krađu identiteta da biste pomogli u zaustavljanju budućih pokušaja" />
+    <Override Locale="hu-hu" Value="Adathalászat bejelentése a jövőbeni kísérletek megállításához" />
+    <Override Locale="id-id" Value="Laporkan pengelabuan untuk membantu menghentikan upaya pengelabuan di masa mendatang" />
+    <Override Locale="it-it" Value="Segnalare phishing per impedire tentativi di attacco futuri" />
+    <Override Locale="ja-jp" Value="今後の被害を防止するために、フィッシングを報告する" />
+    <Override Locale="kk-kz" Value="Болашақ әрекеттерді тоқтатуға көмектесетін фишинг туралы хабарлау" />
+    <Override Locale="ko-kr" Value="향후 시도를 중지하는 데 도움이 되는 피싱 신고" />
+    <Override Locale="lt-lt" Value="Pranešti apie sukčiavimą apsimetant, kad būtų lengviau sustabdyti būsimus bandymus" />
+    <Override Locale="lv-lv" Value="Ziņošana par pikšķerēšanu, lai palīdzētu apturēt turpmākos mēģinājumus" />
+    <Override Locale="ms-my" Value="Laporkan pemancingan untuk membantu menghentikan percubaan masa depan" />
+    <Override Locale="nl-nl" Value="Phishing melden om toekomstige pogingen te stoppen" />
+    <Override Locale="pl-pl" Value="Zgłoś wyłudzanie informacji, aby pomóc w powstrzymaniu prób ataków w przyszłości" />
+    <Override Locale="pt-br" Value="Relatar phishing para ajudar a interromper tentativas futuras" />
+    <Override Locale="ro-ro" Value="Raportați phishingul pentru a ajuta la oprirea încercărilor viitoare" />
+    <Override Locale="ru-ru" Value="Сообщите о фишинге, чтобы предотвратить дальнейшие попытки" />
+    <Override Locale="sk-sk" Value="Nahláste neoprávnené získavanie údajov a pomôžte tak zabrániť budúcim pokusom" />
+    <Override Locale="sl-si" Value="Prijavite lažno predstavljanje, da ustavite prihodnje poskuse" />
+    <Override Locale="sr-cyrl-cs" Value="Пријавите крађу идентитета да бисте спречили будуће покушаје" />
+    <Override Locale="sr-latn-cs" Value="Prijavite krađu identiteta da biste sprečili buduće pokušaje" />
+    <Override Locale="sv-se" Value="Rapportera nätfiske för att stoppa framtida försök" />
+    <Override Locale="th-th" Value="รายงานฟิชชิ่งเพื่อช่วยหยุดความพยายามในอนาคต" />
+    <Override Locale="tr-tr" Value="Gelecekteki girişimlerin durdurulmasına yardımcı olmak için kimlik avı bildir" />
+    <Override Locale="uk-ua" Value="Повідомте про фішинг, щоб попередити повторні спроби" />
+    <Override Locale="vi-vn" Value="Báo cáo lừa đảo qua mạng để giúp dừng các nỗ lực tấn công trong tương lai" />
+    <Override Locale="zh-cn" Value="举报网络钓鱼以帮助停止将来的尝试" />
+    <Override Locale="zh-tw" Value="回報網路釣魚以協助停止日後的嘗試" />
+  </Description>
+  <IconUrl DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportPhish64.png" />
+  <HighResolutionIconUrl DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportPhish128.png" />
+  <SupportUrl DefaultValue="https://go.microsoft.com/fwlink/?linkid=2149898" />
+  <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
+  <AppDomains>
+    <AppDomain>https://aka.ms</AppDomain>
+    <AppDomain>https://ipagave.azurewebsites.net</AppDomain>
+    <AppDomain>https://technet.microsoft.com</AppDomain>
+    <AppDomain>https://support.office.com</AppDomain>
+    <AppDomain>https://webservice.protection.outlook.com</AppDomain>
+  </AppDomains>
+  <!--End Basic Settings. -->
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.3" />
+    </Sets>
+  </Requirements>
+  <!-- These elements support older clients that don't support add-in commands -->
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://ipagave.azurewebsites.net/ReportMessage/ReportPhishing.html" />
+        <RequestedHeight>40</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+  <Permissions>ReadWriteMailbox</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+  </Rule>
+  <DisableEntityHighlighting>false</DisableEntityHighlighting>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Requirements>
+      <bt:Sets>
+        <bt:Set Name="Mailbox" MinVersion="1.3" />
+      </bt:Sets>
+    </Requirements>
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+          <!-- Location of the Functions that UI-less buttons can trigger (ExecuteFunction Actions). -->
+          <FunctionFile resid="functionFile" />
+          <!-- Message Read -->
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <!-- Use the default tab of the ExtensionPoint or create your own with <CustomTab id="myTab"> -->
+            <OfficeTab id="TabDefault">
+              <!-- Up to 6 Groups added per Tab -->
+              <Group id="msgReadGroup">
+                <Label resid="GroupLabel" />
+                <Control xsi:type="Button" id="reportAsPhishingButton">
+                  <Label resid="ReportPhishLabel" />
+                  <Supertip>
+                    <Title resid="ReportPhishTipTitle" />
+                    <Description resid="ReportPhishTipDesc" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16Phish" />
+                    <bt:Image size="32" resid="icon32Phish" />
+                    <bt:Image size="80" resid="icon80Phish" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>cmdPhishing</FunctionName>
+                  </Action>
+                </Control>
+                <!-- Go to http://aka.ms/ButtonCommands to learn how to add more Controls: ExecuteFunction and Menu -->
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+          <!-- Go to http://aka.ms/ExtensionPointsCommands to learn how to add more Extension Points: MessageRead, AppointmentOrganizer, AppointmentAttendee -->
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16Phish" DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportMessage16.png" />
+        <bt:Image id="icon32Phish" DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportMessage32.png" />
+        <bt:Image id="icon80Phish" DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportMessage80.png" />
+        <bt:Image id="iconStatusSucceeded" DefaultValue="https://ipagave.azurewebsites.net/Images/Succeeded.png" />
+        <bt:Image id="iconStatusFailed" DefaultValue="https://ipagave.azurewebsites.net/Images/Failed.png" />
+        <bt:Image id="iconStatusWarning" DefaultValue="https://ipagave.azurewebsites.net/Images/Warning.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="functionFile" DefaultValue="https://ipagave.azurewebsites.net/ReportMessage/FunctionFile.html" />
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="GroupLabel" DefaultValue="Protection">
+          <bt:Override Locale="ar-sa" Value="الحماية" />
+          <bt:Override Locale="bg-bg" Value="Защита" />
+          <bt:Override Locale="ca-es" Value="Protecció" />
+          <bt:Override Locale="cs-cz" Value="Ochrana" />
+          <bt:Override Locale="da-dk" Value="Beskyttelse" />
+          <bt:Override Locale="de-de" Value="Schutz" />
+          <bt:Override Locale="el-gr" Value="Προστασία" />
+          <bt:Override Locale="en-gb" Value="Protection" />
+          <bt:Override Locale="es-es" Value="Protección" />
+          <bt:Override Locale="et-ee" Value="Kaitse" />
+          <bt:Override Locale="eu-es" Value="Babesa" />
+          <bt:Override Locale="fi-fi" Value="Suojaus" />
+          <bt:Override Locale="fr-fr" Value="Protection" />
+          <bt:Override Locale="gl-es" Value="Protección" />
+          <bt:Override Locale="he-il" Value="הגנה" />
+          <bt:Override Locale="hi-in" Value="सुरक्षा" />
+          <bt:Override Locale="hr-hr" Value="Zaštita" />
+          <bt:Override Locale="hu-hu" Value="Védelem" />
+          <bt:Override Locale="id-id" Value="Proteksi" />
+          <bt:Override Locale="it-it" Value="Protezione" />
+          <bt:Override Locale="ja-jp" Value="保護" />
+          <bt:Override Locale="kk-kz" Value="Қорғау" />
+          <bt:Override Locale="ko-kr" Value="보호" />
+          <bt:Override Locale="lt-lt" Value="Apsauga" />
+          <bt:Override Locale="lv-lv" Value="Aizsardzība" />
+          <bt:Override Locale="ms-my" Value="Perlindungan" />
+          <bt:Override Locale="nl-nl" Value="Beveiliging" />
+          <bt:Override Locale="pl-pl" Value="Ochrona" />
+          <bt:Override Locale="pt-br" Value="Proteção" />
+          <bt:Override Locale="ro-ro" Value="Protecție" />
+          <bt:Override Locale="ru-ru" Value="Защита" />
+          <bt:Override Locale="sk-sk" Value="Ochrana" />
+          <bt:Override Locale="sl-si" Value="Zaščita" />
+          <bt:Override Locale="sr-cyrl-cs" Value="Заштита" />
+          <bt:Override Locale="sr-latn-cs" Value="Zaštita" />
+          <bt:Override Locale="sv-se" Value="Skydd" />
+          <bt:Override Locale="th-th" Value="การป้องกัน" />
+          <bt:Override Locale="tr-tr" Value="Koruma" />
+          <bt:Override Locale="uk-ua" Value="Захист" />
+          <bt:Override Locale="vi-vn" Value="Bảo vệ" />
+          <bt:Override Locale="zh-cn" Value="保护" />
+          <bt:Override Locale="zh-tw" Value="保護" />
+        </bt:String>
+        <bt:String id="ReportPhishLabel" DefaultValue="Report Phishing">
+          <bt:Override Locale="ar-sa" Value="الإبلاغ عن تصيد احتيالي" />
+          <bt:Override Locale="bg-bg" Value="Докладване за фишинг" />
+          <bt:Override Locale="ca-es" Value="Informeu que és correu de pesca" />
+          <bt:Override Locale="cs-cz" Value="Nahlásit útok phishing" />
+          <bt:Override Locale="da-dk" Value="Rapportér phishing" />
+          <bt:Override Locale="de-de" Value="Phishing melden" />
+          <bt:Override Locale="el-gr" Value="Αναφορά ως Ηλεκτρονικό &quot;ψάρεμα&quot;" />
+          <bt:Override Locale="en-gb" Value="Report Phishing" />
+          <bt:Override Locale="es-es" Value="Informar sobre correo de phishing" />
+          <bt:Override Locale="et-ee" Value="Andmepüügist teatamine" />
+          <bt:Override Locale="eu-es" Value="Salatu phishinga" />
+          <bt:Override Locale="fi-fi" Value="Ilmoita tietojenkalasteluyrityksestä" />
+          <bt:Override Locale="fr-fr" Value="Signaler un hameçonnage" />
+          <bt:Override Locale="gl-es" Value="Notificar suplantación de identidade" />
+          <bt:Override Locale="he-il" Value="דווח על דיוג" />
+          <bt:Override Locale="hi-in" Value="फ़िशिंग की रिपोर्ट करें" />
+          <bt:Override Locale="hr-hr" Value="Prijavite krađu identiteta" />
+          <bt:Override Locale="hu-hu" Value="Bejelentés adathalász üzenetként" />
+          <bt:Override Locale="id-id" Value="Laporkan Pengelabuan" />
+          <bt:Override Locale="it-it" Value="Segnala phishing" />
+          <bt:Override Locale="ja-jp" Value="フィッシング詐欺の報告" />
+          <bt:Override Locale="kk-kz" Value="Фишинг туралы есеп беру" />
+          <bt:Override Locale="ko-kr" Value="피싱 신고" />
+          <bt:Override Locale="lt-lt" Value="Pranešti apie sukčiavimą apsimetant" />
+          <bt:Override Locale="lv-lv" Value="Ziņot par pikšķerēšanu" />
+          <bt:Override Locale="ms-my" Value="Laporan Pemancingan" />
+          <bt:Override Locale="nl-nl" Value="Rapporteren als phishing" />
+          <bt:Override Locale="pl-pl" Value="Zgłoś wyłudzanie informacji" />
+          <bt:Override Locale="pt-br" Value="Denunciar Phishing" />
+          <bt:Override Locale="ro-ro" Value="Raportați ca phishing" />
+          <bt:Override Locale="ru-ru" Value="Сообщить о фишинге" />
+          <bt:Override Locale="sk-sk" Value="Nahlásiť neoprávnené získavanie údajov" />
+          <bt:Override Locale="sl-si" Value="Prijavi lažno predstavljanje" />
+          <bt:Override Locale="sr-cyrl-cs" Value="Пријави phishing" />
+          <bt:Override Locale="sr-latn-cs" Value="Prijavljivanje phishing poruka" />
+          <bt:Override Locale="sv-se" Value="Rapportera nätfiske" />
+          <bt:Override Locale="th-th" Value="รายงานฟิชชิ่ง" />
+          <bt:Override Locale="tr-tr" Value="Kimlik Avı Bildir" />
+          <bt:Override Locale="uk-ua" Value="Повідомити про фішинг" />
+          <bt:Override Locale="vi-vn" Value="Báo cáo lừa đảo" />
+          <bt:Override Locale="zh-cn" Value="报告网络钓鱼" />
+          <bt:Override Locale="zh-tw" Value="檢舉網路釣魚" />
+        </bt:String>
+        <bt:String id="ReportPhishTipTitle" DefaultValue="Report phishing to help stop future attempts">
+          <bt:Override Locale="ar-sa" Value="الإبلاغ عن التصيد الاحتيالي للمساعدة في إيقاف المحاولات المستقبلية" />
+          <bt:Override Locale="bg-bg" Value="Докладвайте за фишинг, за да спрете бъдещите опити" />
+          <bt:Override Locale="ca-es" Value="Informeu del correu de pesca de credencials per ajudar a aturar els intents futurs" />
+          <bt:Override Locale="cs-cz" Value="Nahlaste útok phishing, abyste zabránili budoucím pokusům" />
+          <bt:Override Locale="da-dk" Value="Rapportér phishing for at stoppe fremtidige forsøg" />
+          <bt:Override Locale="de-de" Value="Melden von Phishing, um zukünftige Versuche zu verhindern" />
+          <bt:Override Locale="el-gr" Value="Αναφέρετε το ηλεκτρονικό ψάρεμα για να διακόψετε μελλοντικές προσπάθειες" />
+          <bt:Override Locale="en-gb" Value="Report phishing to help stop future attempts" />
+          <bt:Override Locale="es-es" Value="Informar de la suplantación de identidad (phishing) para ayudar a detener futuras amenazas" />
+          <bt:Override Locale="et-ee" Value="Teatage andmepüügist, et aidata edaspidised katsed peatada" />
+          <bt:Override Locale="eu-es" Value="Salatu phishinga etorkizuneko saiakerak eteten laguntzeko" />
+          <bt:Override Locale="fi-fi" Value="Ilmoita tietojenkalastelusta tulevien yritysten pysäyttämiseksi" />
+          <bt:Override Locale="fr-fr" Value="Signaler l’hameçonnage pour arrêter les tentatives futures" />
+          <bt:Override Locale="gl-es" Value="Notificar suplantación de identidade para deter tentativas futuras" />
+          <bt:Override Locale="he-il" Value="דווח על דיוג כדי לעזור לעצור ניסיונות עתידיים" />
+          <bt:Override Locale="hi-in" Value="भविष्य में प्रयास रोकने में मदद के लिए फ़िशिंग की रिपोर्ट करें" />
+          <bt:Override Locale="hr-hr" Value="Prijavite krađu identiteta da biste pomogli u zaustavljanju budućih pokušaja" />
+          <bt:Override Locale="hu-hu" Value="Adathalászat bejelentése a jövőbeni kísérletek megállításához" />
+          <bt:Override Locale="id-id" Value="Laporkan pengelabuan untuk membantu menghentikan upaya pengelabuan di masa mendatang" />
+          <bt:Override Locale="it-it" Value="Segnalare phishing per impedire tentativi di attacco futuri" />
+          <bt:Override Locale="ja-jp" Value="今後の被害を防止するために、フィッシングを報告する" />
+          <bt:Override Locale="kk-kz" Value="Болашақ әрекеттерді тоқтатуға көмектесетін фишинг туралы хабарлау" />
+          <bt:Override Locale="ko-kr" Value="향후 시도를 중지하는 데 도움이 되는 피싱 신고" />
+          <bt:Override Locale="lt-lt" Value="Pranešti apie sukčiavimą apsimetant, kad būtų lengviau sustabdyti būsimus bandymus" />
+          <bt:Override Locale="lv-lv" Value="Ziņošana par pikšķerēšanu, lai palīdzētu apturēt turpmākos mēģinājumus" />
+          <bt:Override Locale="ms-my" Value="Laporkan pemancingan untuk membantu menghentikan percubaan masa depan" />
+          <bt:Override Locale="nl-nl" Value="Phishing melden om toekomstige pogingen te stoppen" />
+          <bt:Override Locale="pl-pl" Value="Zgłoś wyłudzanie informacji, aby pomóc w powstrzymaniu prób ataków w przyszłości" />
+          <bt:Override Locale="pt-br" Value="Relatar phishing para ajudar a interromper tentativas futuras" />
+          <bt:Override Locale="ro-ro" Value="Raportați phishingul pentru a ajuta la oprirea încercărilor viitoare" />
+          <bt:Override Locale="ru-ru" Value="Сообщите о фишинге, чтобы предотвратить дальнейшие попытки" />
+          <bt:Override Locale="sk-sk" Value="Nahláste neoprávnené získavanie údajov a pomôžte tak zabrániť budúcim pokusom" />
+          <bt:Override Locale="sl-si" Value="Prijavite lažno predstavljanje, da ustavite prihodnje poskuse" />
+          <bt:Override Locale="sr-cyrl-cs" Value="Пријавите крађу идентитета да бисте спречили будуће покушаје" />
+          <bt:Override Locale="sr-latn-cs" Value="Prijavite krađu identiteta da biste sprečili buduće pokušaje" />
+          <bt:Override Locale="sv-se" Value="Rapportera nätfiske för att stoppa framtida försök" />
+          <bt:Override Locale="th-th" Value="รายงานฟิชชิ่งเพื่อช่วยหยุดความพยายามในอนาคต" />
+          <bt:Override Locale="tr-tr" Value="Gelecekteki girişimlerin durdurulmasına yardımcı olmak için kimlik avı bildir" />
+          <bt:Override Locale="uk-ua" Value="Повідомте про фішинг, щоб попередити повторні спроби" />
+          <bt:Override Locale="vi-vn" Value="Báo cáo lừa đảo qua mạng để giúp dừng các nỗ lực tấn công trong tương lai" />
+          <bt:Override Locale="zh-cn" Value="举报网络钓鱼以帮助停止将来的尝试" />
+          <bt:Override Locale="zh-tw" Value="回報網路釣魚以協助停止日後的嘗試" />
+        </bt:String>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="ReportPhishTipDesc" DefaultValue="Help keep everyone safe by submitting suspicious items for review. Your admin might forward this item to Microsoft.">
+          <bt:Override Locale="ar-sa" Value="ساعد في الحفاظ على أمان الجميع من خلال إرسال العناصر المريبة للمراجعة. قد يقوم المسؤول بإعادة توجيه هذا العنصر إلى Microsoft." />
+          <bt:Override Locale="bg-bg" Value="Помогнете на всички да бъдат в безопасност, като подадете подозрителни елементи за преглед. Вашият администратор може да препрати този елемент на Microsoft." />
+          <bt:Override Locale="ca-es" Value="Per ajudar a protegir a tothom, envieu els elements sospitosos per a revisar-los. És possible que l'administrador reenviï aquest element a Microsoft." />
+          <bt:Override Locale="cs-cz" Value="Odesíláním podezřelých položek ke kontrole pomůžete zajistit bezpečnost pro všechny. Správce může tuto položku přeposlat Microsoftu." />
+          <bt:Override Locale="da-dk" Value="Hjælp med at beskytte alle ved at sende mistænkelige elementer til gennemsyn. Din administrator videresender muligvis dette element til Microsoft." />
+          <bt:Override Locale="de-de" Value="Sorgen Sie dafür, dass alle Personen geschützt sind, indem Sie verdächtige Elemente zur Überprüfung übermitteln. Ihr Administrator leitet dieses Element möglicherweise an Microsoft weiter." />
+          <bt:Override Locale="el-gr" Value="Συμβάλετε στην προστασία όλων των χρηστών υποβάλλοντας ύποπτα στοιχεία για αναθεώρηση. Ο διαχειριστής σας μπορεί να προωθήσει αυτό το στοιχείο στη Microsoft." />
+          <bt:Override Locale="en-gb" Value="Help keep everyone safe by submitting suspicious items for review. Your admin might forward this item to Microsoft." />
+          <bt:Override Locale="es-es" Value="Ayude a proteger a todos enviando elementos sospechosos para que se revisen. Es posible que el administrador reenvíe este elemento a Microsoft." />
+          <bt:Override Locale="et-ee" Value="Aidake kõiki kaitsta, edastades kahtlased üksused läbivaatamiseks. Teie administraator võib selle üksuse Microsoftile edasi saata." />
+          <bt:Override Locale="eu-es" Value="Lagundu denon segurtasunari eusten, eta bidali elementu susmagarriak berrikusteko. Zure administratzaileak Microsoft-era bidal dezake elementu hori." />
+          <bt:Override Locale="fi-fi" Value="Auta pitämään kaikki turvassa lähettämällä epäilyttävät kohteet tarkistettavaksi. Järjestelmänvalvojasi voi lähettää tämän kohteen edelleen Microsoftille." />
+          <bt:Override Locale="fr-fr" Value="Protégez tout le monde en envoyant des éléments suspects pour révision. Votre administrateur peut transférer cet élément à Microsoft." />
+          <bt:Override Locale="gl-es" Value="Axuda a manter a seguranza de todos enviando elementos sospeitosos para a súa revisión. O administrador podería reenviar este elemento a Microsoft." />
+          <bt:Override Locale="he-il" Value="עזור להגן על כולם על-ידי שליחת פריטים חשודים לסקירה. מנהל המערכת שלך עשוי להעביר פריט זה ל- Microsoft." />
+          <bt:Override Locale="hi-in" Value="समीक्षा के लिए संदिग्ध आइटम सबमिट करके सभी को सुरक्षित रखने में मदद करें. आपका व्यवस्थापक इस आइटम को Microsoft पर अग्रेषित कर सकता है." />
+          <bt:Override Locale="hr-hr" Value="Pomozite očuvanju opće sigurnosti slanjem sumnjivih stavki na pregled. Vaš administrator može proslijediti ovu stavku Microsoftu." />
+          <bt:Override Locale="hu-hu" Value="A gyanús elemek felülvizsgálatra való beküldésével segítheti mindenki biztonságát. A rendszergazda továbbíthatja ezt az elemet a Microsoftnak." />
+          <bt:Override Locale="id-id" Value="Bantu semua orang tetap aman dengan mengirimkan item mencurigakan untuk ditinjau. Admin Anda dapat meneruskan item ini ke Microsoft." />
+          <bt:Override Locale="it-it" Value="Contribuisci a proteggere tutti inviando elementi sospetti in revisione. L'amministratore potrebbe inoltrare questo elemento a Microsoft." />
+          <bt:Override Locale="ja-jp" Value="疑わしいアイテムをレビュー用に送信して、すべてのユーザーの安全を確保します。管理者がこのアイテムを Microsoft に転送する可能性があります。" />
+          <bt:Override Locale="kk-kz" Value="Күдікті элементтерді тексеріске жіберу арқылы барлығына қауіпсіз болуға көмектесіңіз. Әкімшіңіз бұл элементті Microsoft корпорациясына қайта жіберуі мүмкін." />
+          <bt:Override Locale="ko-kr" Value="의심스러운 항목을 검토용으로 제출하여 모든 사용자를 안전하게 보호합니다. 관리자가 이 항목을 Microsoft로 전달할 수 있습니다." />
+          <bt:Override Locale="lt-lt" Value="Padėkite apsaugoti visus pateikdami peržiūrėti įtartinus elementus. Jūsų administratorius gali persiųsti šį elementą &quot;Microsoft&quot;." />
+          <bt:Override Locale="lv-lv" Value="Palīdziet aizsargāt visus dalībniekus, iesniedzot aizdomīgus vienumus pārskatīšanai. Administrators šo vienumu var pārsūtīt korporācijai Microsoft." />
+          <bt:Override Locale="ms-my" Value="Membantu memastikan semua orang selamat dengan menyerahkan item yang mencurigakan untuk semakan. Pentadbir anda mungkin memajukan item ini kepada Microsoft." />
+          <bt:Override Locale="nl-nl" Value="Help iedereen veilig te houden door verdachte items ter beoordeling in te dienen. Uw beheerder kan dit item doorsturen naar Microsoft." />
+          <bt:Override Locale="pl-pl" Value="Pomóż zapewnić wszystkim bezpieczeństwo, przesyłając podejrzane elementy do przeglądu. Administrator może przesłać ten element dalej do firmy Microsoft." />
+          <bt:Override Locale="pt-br" Value="Ajude a manter todos seguros enviando itens suspeitos para revisão. Seu administrador pode encaminhar este item para a Microsoft." />
+          <bt:Override Locale="ro-ro" Value="Ajutați-i pe toți să fie în siguranță, prin trimiterea elementelor suspecte pentru verificare. Este posibil ca administratorul să redirecționeze acest element la Microsoft." />
+          <bt:Override Locale="ru-ru" Value="Помогите обезопасить других пользователей, отправляя подозрительные объекты на проверку. Ваш администратор может пересылать этот элемент в Microsoft." />
+          <bt:Override Locale="sk-sk" Value="Odosielaním podozrivých položiek na kontrolu pomôžete zaistiť bezpečnosť pre všetkých. Správca môže túto položku preposlať spoločnosti Microsoft." />
+          <bt:Override Locale="sl-si" Value="Poskrbite za varnost vseh tako, da pošljete sumljive elemente v pregled. Vaš skrbnik bo ta element morda posredoval Microsoftu." />
+          <bt:Override Locale="sr-cyrl-cs" Value="Помозите свима да буду безбедни тако што ћете послати сумњиве ставке на преглед. Ваш администратор би могао да проследи ову ставку корпорацији Microsoft." />
+          <bt:Override Locale="sr-latn-cs" Value="Pomozite svima da budu bezbedni tako što ćete poslati sumnjive stavke na pregled. Vaš administrator bi mogao da prosledi ovu stavku korporaciji Microsoft." />
+          <bt:Override Locale="sv-se" Value="Hjälp till att skydda alla genom att skicka misstänkta objekt för granskning. Din administratör kan vidarebefordra det här objektet till Microsoft." />
+          <bt:Override Locale="th-th" Value="ช่วยให้ทุกคนปลอดภัยด้วยการส่งรายการที่น่าสงสัยเพื่อตรวจทาน ผู้ดูแลระบบของคุณอาจส่งต่อรายการนี้ไปยัง Microsoft" />
+          <bt:Override Locale="tr-tr" Value="Şüpheli öğeleri gözden geçirilmeleri için göndererek herkesin güvende kalmasına yardımcı olun. Yöneticiniz bu öğeyi Microsoft'a iletebilir." />
+          <bt:Override Locale="uk-ua" Value="Допоможіть захистити всіх, надіславши підозрілі елементи для перевірки. Ваш адміністратор може переслати цей елемент до корпорації Майкрософт." />
+          <bt:Override Locale="vi-vn" Value="Giúp bảo vệ mọi người bằng cách gửi các mục đáng ngờ để xem xét. Người quản trị của bạn có thể chuyển tiếp mục này tới Microsoft." />
+          <bt:Override Locale="zh-cn" Value="通过提交可疑项目以供审阅，帮助确保所有人的安全。你的管理员可能会将此项转发给 Microsoft。" />
+          <bt:Override Locale="zh-tw" Value="提交可疑項目供檢閱，以協助保護所有人的安全。您的系統管理員可能會將此項目轉給 Microsoft。" />
+        </bt:String>
+      </bt:LongStrings>
+    </Resources>
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+      <Requirements>
+        <bt:Sets>
+          <bt:Set Name="Mailbox" MinVersion="1.3" />
+        </bt:Sets>
+      </Requirements>
+      <Hosts>
+        <Host xsi:type="MailHost">
+          <DesktopFormFactor>
+            <!-- Location of the Functions that UI-less buttons can trigger (ExecuteFunction Actions). -->
+            <FunctionFile resid="functionFile" />
+            <!-- Message Read -->
+            <ExtensionPoint xsi:type="MessageReadCommandSurface">
+              <!-- Use the default tab of the ExtensionPoint or create your own with <CustomTab id="myTab"> -->
+              <OfficeTab id="TabDefault">
+                <!-- Up to 6 Groups added per Tab -->
+                <Group id="msgReadGroup">
+                  <Label resid="GroupLabel" />
+                  <Control xsi:type="Button" id="reportAsPhishingButton">
+                    <Label resid="ReportPhishLabel" />
+                    <Supertip>
+                      <Title resid="ReportPhishTipTitle" />
+                      <Description resid="ReportPhishTipDesc" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="icon16Phish" />
+                      <bt:Image size="32" resid="icon32Phish" />
+                      <bt:Image size="80" resid="icon80Phish" />
+                    </Icon>
+                    <Action xsi:type="ExecuteFunction">
+                      <FunctionName>cmdPhishing</FunctionName>
+                    </Action>
+                  </Control>
+                  <!-- Go to http://aka.ms/ButtonCommands to learn how to add more Controls: ExecuteFunction and Menu -->
+                </Group>
+              </OfficeTab>
+            </ExtensionPoint>
+            <!-- Go to http://aka.ms/ExtensionPointsCommands to learn how to add more Extension Points: MessageRead, AppointmentOrganizer, AppointmentAttendee -->
+          </DesktopFormFactor>
+          <MobileFormFactor>
+            <!-- Location of the Functions that UI-less buttons can trigger (ExecuteFunction Actions). -->
+            <FunctionFile resid="mobileFunctionFile" />
+            <!-- Message Read -->
+            <ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
+              <!-- Up to 6 Groups added per Tab -->
+              <Group id="msgReadGroup">
+                <Label resid="GroupLabel" />
+                <Control xsi:type="MobileButton" id="ReportingMobile">
+                  <Label resid="ReportPhishLabel" />
+                  <Icon xsi:type="bt:MobileIconList">
+                    <bt:Image size="25" scale="1" resid="icon16Phish" />
+                    <bt:Image size="25" scale="2" resid="icon16Phish" />
+                    <bt:Image size="25" scale="3" resid="icon16Phish" />
+
+                    <bt:Image size="32" scale="1" resid="icon32Phish" />
+                    <bt:Image size="32" scale="2" resid="icon32Phish" />
+                    <bt:Image size="32" scale="3" resid="icon32Phish" />
+
+                    <bt:Image size="48" scale="1" resid="icon80Phish" />
+                    <bt:Image size="48" scale="2" resid="icon80Phish" />
+                    <bt:Image size="48" scale="3" resid="icon80Phish" />
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>cmdPhishing</FunctionName>
+                  </Action>
+                </Control>
+                <!-- Go to http://aka.ms/ButtonCommands to learn how to add more Controls: ExecuteFunction and Menu -->
+              </Group>
+            </ExtensionPoint>
+            <!-- Go to http://aka.ms/ExtensionPointsCommands to learn how to add more Extension Points: MessageRead, AppointmentOrganizer, AppointmentAttendee -->
+          </MobileFormFactor>
+        </Host>
+      </Hosts>
+      <Resources>
+        <bt:Images>
+          <bt:Image id="icon16Phish" DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportMessage16.png" />
+          <bt:Image id="icon32Phish" DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportMessage32.png" />
+          <bt:Image id="icon80Phish" DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportMessage80.png" />
+          <bt:Image id="iconStatusSucceeded" DefaultValue="https://ipagave.azurewebsites.net/Images/Succeeded.png" />
+          <bt:Image id="iconStatusFailed" DefaultValue="https://ipagave.azurewebsites.net/Images/Failed.png" />
+          <bt:Image id="iconStatusWarning" DefaultValue="https://ipagave.azurewebsites.net/Images/Warning.png" />
+        </bt:Images>
+        <bt:Urls>
+          <bt:Url id="functionFile" DefaultValue="https://ipagave.azurewebsites.net/ReportMessage/FunctionFile.html" />
+          <bt:Url id="mobileFunctionFile" DefaultValue="https://ipagave.azurewebsites.net/ReportMessage/FunctionFileMobile.html" />
+        </bt:Urls>
+        <bt:ShortStrings>
+          <bt:String id="GroupLabel" DefaultValue="Protection">
+            <bt:Override Locale="ar-sa" Value="الحماية" />
+            <bt:Override Locale="bg-bg" Value="Защита" />
+            <bt:Override Locale="ca-es" Value="Protecció" />
+            <bt:Override Locale="cs-cz" Value="Ochrana" />
+            <bt:Override Locale="da-dk" Value="Beskyttelse" />
+            <bt:Override Locale="de-de" Value="Schutz" />
+            <bt:Override Locale="el-gr" Value="Προστασία" />
+            <bt:Override Locale="en-gb" Value="Protection" />
+            <bt:Override Locale="es-es" Value="Protección" />
+            <bt:Override Locale="et-ee" Value="Kaitse" />
+            <bt:Override Locale="eu-es" Value="Babesa" />
+            <bt:Override Locale="fi-fi" Value="Suojaus" />
+            <bt:Override Locale="fr-fr" Value="Protection" />
+            <bt:Override Locale="gl-es" Value="Protección" />
+            <bt:Override Locale="he-il" Value="הגנה" />
+            <bt:Override Locale="hi-in" Value="सुरक्षा" />
+            <bt:Override Locale="hr-hr" Value="Zaštita" />
+            <bt:Override Locale="hu-hu" Value="Védelem" />
+            <bt:Override Locale="id-id" Value="Proteksi" />
+            <bt:Override Locale="it-it" Value="Protezione" />
+            <bt:Override Locale="ja-jp" Value="保護" />
+            <bt:Override Locale="kk-kz" Value="Қорғау" />
+            <bt:Override Locale="ko-kr" Value="보호" />
+            <bt:Override Locale="lt-lt" Value="Apsauga" />
+            <bt:Override Locale="lv-lv" Value="Aizsardzība" />
+            <bt:Override Locale="ms-my" Value="Perlindungan" />
+            <bt:Override Locale="nl-nl" Value="Beveiliging" />
+            <bt:Override Locale="pl-pl" Value="Ochrona" />
+            <bt:Override Locale="pt-br" Value="Proteção" />
+            <bt:Override Locale="ro-ro" Value="Protecție" />
+            <bt:Override Locale="ru-ru" Value="Защита" />
+            <bt:Override Locale="sk-sk" Value="Ochrana" />
+            <bt:Override Locale="sl-si" Value="Zaščita" />
+            <bt:Override Locale="sr-cyrl-cs" Value="Заштита" />
+            <bt:Override Locale="sr-latn-cs" Value="Zaštita" />
+            <bt:Override Locale="sv-se" Value="Skydd" />
+            <bt:Override Locale="th-th" Value="การป้องกัน" />
+            <bt:Override Locale="tr-tr" Value="Koruma" />
+            <bt:Override Locale="uk-ua" Value="Захист" />
+            <bt:Override Locale="vi-vn" Value="Bảo vệ" />
+            <bt:Override Locale="zh-cn" Value="保护" />
+            <bt:Override Locale="zh-tw" Value="保護" />
+          </bt:String>
+          <bt:String id="ReportPhishLabel" DefaultValue="Report Phishing">
+            <bt:Override Locale="ar-sa" Value="الإبلاغ عن تصيد احتيالي" />
+            <bt:Override Locale="bg-bg" Value="Докладване за фишинг" />
+            <bt:Override Locale="ca-es" Value="Informeu que és correu de pesca" />
+            <bt:Override Locale="cs-cz" Value="Nahlásit útok phishing" />
+            <bt:Override Locale="da-dk" Value="Rapportér phishing" />
+            <bt:Override Locale="de-de" Value="Phishing melden" />
+            <bt:Override Locale="el-gr" Value="Αναφορά ως Ηλεκτρονικό &quot;ψάρεμα&quot;" />
+            <bt:Override Locale="en-gb" Value="Report Phishing" />
+            <bt:Override Locale="es-es" Value="Informar sobre correo de phishing" />
+            <bt:Override Locale="et-ee" Value="Andmepüügist teatamine" />
+            <bt:Override Locale="eu-es" Value="Salatu phishinga" />
+            <bt:Override Locale="fi-fi" Value="Ilmoita tietojenkalasteluyrityksestä" />
+            <bt:Override Locale="fr-fr" Value="Signaler un hameçonnage" />
+            <bt:Override Locale="gl-es" Value="Notificar suplantación de identidade" />
+            <bt:Override Locale="he-il" Value="דווח על דיוג" />
+            <bt:Override Locale="hi-in" Value="फ़िशिंग की रिपोर्ट करें" />
+            <bt:Override Locale="hr-hr" Value="Prijavite krađu identiteta" />
+            <bt:Override Locale="hu-hu" Value="Bejelentés adathalász üzenetként" />
+            <bt:Override Locale="id-id" Value="Laporkan Pengelabuan" />
+            <bt:Override Locale="it-it" Value="Segnala phishing" />
+            <bt:Override Locale="ja-jp" Value="フィッシング詐欺の報告" />
+            <bt:Override Locale="kk-kz" Value="Фишинг туралы есеп беру" />
+            <bt:Override Locale="ko-kr" Value="피싱 신고" />
+            <bt:Override Locale="lt-lt" Value="Pranešti apie sukčiavimą apsimetant" />
+            <bt:Override Locale="lv-lv" Value="Ziņot par pikšķerēšanu" />
+            <bt:Override Locale="ms-my" Value="Laporan Pemancingan" />
+            <bt:Override Locale="nl-nl" Value="Rapporteren als phishing" />
+            <bt:Override Locale="pl-pl" Value="Zgłoś wyłudzanie informacji" />
+            <bt:Override Locale="pt-br" Value="Denunciar Phishing" />
+            <bt:Override Locale="ro-ro" Value="Raportați ca phishing" />
+            <bt:Override Locale="ru-ru" Value="Сообщить о фишинге" />
+            <bt:Override Locale="sk-sk" Value="Nahlásiť neoprávnené získavanie údajov" />
+            <bt:Override Locale="sl-si" Value="Prijavi lažno predstavljanje" />
+            <bt:Override Locale="sr-cyrl-cs" Value="Пријави phishing" />
+            <bt:Override Locale="sr-latn-cs" Value="Prijavljivanje phishing poruka" />
+            <bt:Override Locale="sv-se" Value="Rapportera nätfiske" />
+            <bt:Override Locale="th-th" Value="รายงานฟิชชิ่ง" />
+            <bt:Override Locale="tr-tr" Value="Kimlik Avı Bildir" />
+            <bt:Override Locale="uk-ua" Value="Повідомити про фішинг" />
+            <bt:Override Locale="vi-vn" Value="Báo cáo lừa đảo" />
+            <bt:Override Locale="zh-cn" Value="报告网络钓鱼" />
+            <bt:Override Locale="zh-tw" Value="檢舉網路釣魚" />
+          </bt:String>
+          <bt:String id="ReportPhishTipTitle" DefaultValue="Report phishing to help stop future attempts">
+            <bt:Override Locale="ar-sa" Value="الإبلاغ عن التصيد الاحتيالي للمساعدة في إيقاف المحاولات المستقبلية" />
+            <bt:Override Locale="bg-bg" Value="Докладвайте за фишинг, за да спрете бъдещите опити" />
+            <bt:Override Locale="ca-es" Value="Informeu del correu de pesca de credencials per ajudar a aturar els intents futurs" />
+            <bt:Override Locale="cs-cz" Value="Nahlaste útok phishing, abyste zabránili budoucím pokusům" />
+            <bt:Override Locale="da-dk" Value="Rapportér phishing for at stoppe fremtidige forsøg" />
+            <bt:Override Locale="de-de" Value="Melden von Phishing, um zukünftige Versuche zu verhindern" />
+            <bt:Override Locale="el-gr" Value="Αναφέρετε το ηλεκτρονικό ψάρεμα για να διακόψετε μελλοντικές προσπάθειες" />
+            <bt:Override Locale="en-gb" Value="Report phishing to help stop future attempts" />
+            <bt:Override Locale="es-es" Value="Informar de la suplantación de identidad (phishing) para ayudar a detener futuras amenazas" />
+            <bt:Override Locale="et-ee" Value="Teatage andmepüügist, et aidata edaspidised katsed peatada" />
+            <bt:Override Locale="eu-es" Value="Salatu phishinga etorkizuneko saiakerak eteten laguntzeko" />
+            <bt:Override Locale="fi-fi" Value="Ilmoita tietojenkalastelusta tulevien yritysten pysäyttämiseksi" />
+            <bt:Override Locale="fr-fr" Value="Signaler l’hameçonnage pour arrêter les tentatives futures" />
+            <bt:Override Locale="gl-es" Value="Notificar suplantación de identidade para deter tentativas futuras" />
+            <bt:Override Locale="he-il" Value="דווח על דיוג כדי לעזור לעצור ניסיונות עתידיים" />
+            <bt:Override Locale="hi-in" Value="भविष्य में प्रयास रोकने में मदद के लिए फ़िशिंग की रिपोर्ट करें" />
+            <bt:Override Locale="hr-hr" Value="Prijavite krađu identiteta da biste pomogli u zaustavljanju budućih pokušaja" />
+            <bt:Override Locale="hu-hu" Value="Adathalászat bejelentése a jövőbeni kísérletek megállításához" />
+            <bt:Override Locale="id-id" Value="Laporkan pengelabuan untuk membantu menghentikan upaya pengelabuan di masa mendatang" />
+            <bt:Override Locale="it-it" Value="Segnalare phishing per impedire tentativi di attacco futuri" />
+            <bt:Override Locale="ja-jp" Value="今後の被害を防止するために、フィッシングを報告する" />
+            <bt:Override Locale="kk-kz" Value="Болашақ әрекеттерді тоқтатуға көмектесетін фишинг туралы хабарлау" />
+            <bt:Override Locale="ko-kr" Value="향후 시도를 중지하는 데 도움이 되는 피싱 신고" />
+            <bt:Override Locale="lt-lt" Value="Pranešti apie sukčiavimą apsimetant, kad būtų lengviau sustabdyti būsimus bandymus" />
+            <bt:Override Locale="lv-lv" Value="Ziņošana par pikšķerēšanu, lai palīdzētu apturēt turpmākos mēģinājumus" />
+            <bt:Override Locale="ms-my" Value="Laporkan pemancingan untuk membantu menghentikan percubaan masa depan" />
+            <bt:Override Locale="nl-nl" Value="Phishing melden om toekomstige pogingen te stoppen" />
+            <bt:Override Locale="pl-pl" Value="Zgłoś wyłudzanie informacji, aby pomóc w powstrzymaniu prób ataków w przyszłości" />
+            <bt:Override Locale="pt-br" Value="Relatar phishing para ajudar a interromper tentativas futuras" />
+            <bt:Override Locale="ro-ro" Value="Raportați phishingul pentru a ajuta la oprirea încercărilor viitoare" />
+            <bt:Override Locale="ru-ru" Value="Сообщите о фишинге, чтобы предотвратить дальнейшие попытки" />
+            <bt:Override Locale="sk-sk" Value="Nahláste neoprávnené získavanie údajov a pomôžte tak zabrániť budúcim pokusom" />
+            <bt:Override Locale="sl-si" Value="Prijavite lažno predstavljanje, da ustavite prihodnje poskuse" />
+            <bt:Override Locale="sr-cyrl-cs" Value="Пријавите крађу идентитета да бисте спречили будуће покушаје" />
+            <bt:Override Locale="sr-latn-cs" Value="Prijavite krađu identiteta da biste sprečili buduće pokušaje" />
+            <bt:Override Locale="sv-se" Value="Rapportera nätfiske för att stoppa framtida försök" />
+            <bt:Override Locale="th-th" Value="รายงานฟิชชิ่งเพื่อช่วยหยุดความพยายามในอนาคต" />
+            <bt:Override Locale="tr-tr" Value="Gelecekteki girişimlerin durdurulmasına yardımcı olmak için kimlik avı bildir" />
+            <bt:Override Locale="uk-ua" Value="Повідомте про фішинг, щоб попередити повторні спроби" />
+            <bt:Override Locale="vi-vn" Value="Báo cáo lừa đảo qua mạng để giúp dừng các nỗ lực tấn công trong tương lai" />
+            <bt:Override Locale="zh-cn" Value="举报网络钓鱼以帮助停止将来的尝试" />
+            <bt:Override Locale="zh-tw" Value="回報網路釣魚以協助停止日後的嘗試" />
+          </bt:String>
+        </bt:ShortStrings>
+        <bt:LongStrings>
+          <bt:String id="ReportPhishTipDesc" DefaultValue="Help keep everyone safe by submitting suspicious items for review. Your admin might forward this item to Microsoft.">
+            <bt:Override Locale="ar-sa" Value="ساعد في الحفاظ على أمان الجميع من خلال إرسال العناصر المريبة للمراجعة. قد يقوم المسؤول بإعادة توجيه هذا العنصر إلى Microsoft." />
+            <bt:Override Locale="bg-bg" Value="Помогнете на всички да бъдат в безопасност, като подадете подозрителни елементи за преглед. Вашият администратор може да препрати този елемент на Microsoft." />
+            <bt:Override Locale="ca-es" Value="Per ajudar a protegir a tothom, envieu els elements sospitosos per a revisar-los. És possible que l'administrador reenviï aquest element a Microsoft." />
+            <bt:Override Locale="cs-cz" Value="Odesíláním podezřelých položek ke kontrole pomůžete zajistit bezpečnost pro všechny. Správce může tuto položku přeposlat Microsoftu." />
+            <bt:Override Locale="da-dk" Value="Hjælp med at beskytte alle ved at sende mistænkelige elementer til gennemsyn. Din administrator videresender muligvis dette element til Microsoft." />
+            <bt:Override Locale="de-de" Value="Sorgen Sie dafür, dass alle Personen geschützt sind, indem Sie verdächtige Elemente zur Überprüfung übermitteln. Ihr Administrator leitet dieses Element möglicherweise an Microsoft weiter." />
+            <bt:Override Locale="el-gr" Value="Συμβάλετε στην προστασία όλων των χρηστών υποβάλλοντας ύποπτα στοιχεία για αναθεώρηση. Ο διαχειριστής σας μπορεί να προωθήσει αυτό το στοιχείο στη Microsoft." />
+            <bt:Override Locale="en-gb" Value="Help keep everyone safe by submitting suspicious items for review. Your admin might forward this item to Microsoft." />
+            <bt:Override Locale="es-es" Value="Ayude a proteger a todos enviando elementos sospechosos para que se revisen. Es posible que el administrador reenvíe este elemento a Microsoft." />
+            <bt:Override Locale="et-ee" Value="Aidake kõiki kaitsta, edastades kahtlased üksused läbivaatamiseks. Teie administraator võib selle üksuse Microsoftile edasi saata." />
+            <bt:Override Locale="eu-es" Value="Lagundu denon segurtasunari eusten, eta bidali elementu susmagarriak berrikusteko. Zure administratzaileak Microsoft-era bidal dezake elementu hori." />
+            <bt:Override Locale="fi-fi" Value="Auta pitämään kaikki turvassa lähettämällä epäilyttävät kohteet tarkistettavaksi. Järjestelmänvalvojasi voi lähettää tämän kohteen edelleen Microsoftille." />
+            <bt:Override Locale="fr-fr" Value="Protégez tout le monde en envoyant des éléments suspects pour révision. Votre administrateur peut transférer cet élément à Microsoft." />
+            <bt:Override Locale="gl-es" Value="Axuda a manter a seguranza de todos enviando elementos sospeitosos para a súa revisión. O administrador podería reenviar este elemento a Microsoft." />
+            <bt:Override Locale="he-il" Value="עזור להגן על כולם על-ידי שליחת פריטים חשודים לסקירה. מנהל המערכת שלך עשוי להעביר פריט זה ל- Microsoft." />
+            <bt:Override Locale="hi-in" Value="समीक्षा के लिए संदिग्ध आइटम सबमिट करके सभी को सुरक्षित रखने में मदद करें. आपका व्यवस्थापक इस आइटम को Microsoft पर अग्रेषित कर सकता है." />
+            <bt:Override Locale="hr-hr" Value="Pomozite očuvanju opće sigurnosti slanjem sumnjivih stavki na pregled. Vaš administrator može proslijediti ovu stavku Microsoftu." />
+            <bt:Override Locale="hu-hu" Value="A gyanús elemek felülvizsgálatra való beküldésével segítheti mindenki biztonságát. A rendszergazda továbbíthatja ezt az elemet a Microsoftnak." />
+            <bt:Override Locale="id-id" Value="Bantu semua orang tetap aman dengan mengirimkan item mencurigakan untuk ditinjau. Admin Anda dapat meneruskan item ini ke Microsoft." />
+            <bt:Override Locale="it-it" Value="Contribuisci a proteggere tutti inviando elementi sospetti in revisione. L'amministratore potrebbe inoltrare questo elemento a Microsoft." />
+            <bt:Override Locale="ja-jp" Value="疑わしいアイテムをレビュー用に送信して、すべてのユーザーの安全を確保します。管理者がこのアイテムを Microsoft に転送する可能性があります。" />
+            <bt:Override Locale="kk-kz" Value="Күдікті элементтерді тексеріске жіберу арқылы барлығына қауіпсіз болуға көмектесіңіз. Әкімшіңіз бұл элементті Microsoft корпорациясына қайта жіберуі мүмкін." />
+            <bt:Override Locale="ko-kr" Value="의심스러운 항목을 검토용으로 제출하여 모든 사용자를 안전하게 보호합니다. 관리자가 이 항목을 Microsoft로 전달할 수 있습니다." />
+            <bt:Override Locale="lt-lt" Value="Padėkite apsaugoti visus pateikdami peržiūrėti įtartinus elementus. Jūsų administratorius gali persiųsti šį elementą &quot;Microsoft&quot;." />
+            <bt:Override Locale="lv-lv" Value="Palīdziet aizsargāt visus dalībniekus, iesniedzot aizdomīgus vienumus pārskatīšanai. Administrators šo vienumu var pārsūtīt korporācijai Microsoft." />
+            <bt:Override Locale="ms-my" Value="Membantu memastikan semua orang selamat dengan menyerahkan item yang mencurigakan untuk semakan. Pentadbir anda mungkin memajukan item ini kepada Microsoft." />
+            <bt:Override Locale="nl-nl" Value="Help iedereen veilig te houden door verdachte items ter beoordeling in te dienen. Uw beheerder kan dit item doorsturen naar Microsoft." />
+            <bt:Override Locale="pl-pl" Value="Pomóż zapewnić wszystkim bezpieczeństwo, przesyłając podejrzane elementy do przeglądu. Administrator może przesłać ten element dalej do firmy Microsoft." />
+            <bt:Override Locale="pt-br" Value="Ajude a manter todos seguros enviando itens suspeitos para revisão. Seu administrador pode encaminhar este item para a Microsoft." />
+            <bt:Override Locale="ro-ro" Value="Ajutați-i pe toți să fie în siguranță, prin trimiterea elementelor suspecte pentru verificare. Este posibil ca administratorul să redirecționeze acest element la Microsoft." />
+            <bt:Override Locale="ru-ru" Value="Помогите обезопасить других пользователей, отправляя подозрительные объекты на проверку. Ваш администратор может пересылать этот элемент в Microsoft." />
+            <bt:Override Locale="sk-sk" Value="Odosielaním podozrivých položiek na kontrolu pomôžete zaistiť bezpečnosť pre všetkých. Správca môže túto položku preposlať spoločnosti Microsoft." />
+            <bt:Override Locale="sl-si" Value="Poskrbite za varnost vseh tako, da pošljete sumljive elemente v pregled. Vaš skrbnik bo ta element morda posredoval Microsoftu." />
+            <bt:Override Locale="sr-cyrl-cs" Value="Помозите свима да буду безбедни тако што ћете послати сумњиве ставке на преглед. Ваш администратор би могао да проследи ову ставку корпорацији Microsoft." />
+            <bt:Override Locale="sr-latn-cs" Value="Pomozite svima da budu bezbedni tako što ćete poslati sumnjive stavke na pregled. Vaš administrator bi mogao da prosledi ovu stavku korporaciji Microsoft." />
+            <bt:Override Locale="sv-se" Value="Hjälp till att skydda alla genom att skicka misstänkta objekt för granskning. Din administratör kan vidarebefordra det här objektet till Microsoft." />
+            <bt:Override Locale="th-th" Value="ช่วยให้ทุกคนปลอดภัยด้วยการส่งรายการที่น่าสงสัยเพื่อตรวจทาน ผู้ดูแลระบบของคุณอาจส่งต่อรายการนี้ไปยัง Microsoft" />
+            <bt:Override Locale="tr-tr" Value="Şüpheli öğeleri gözden geçirilmeleri için göndererek herkesin güvende kalmasına yardımcı olun. Yöneticiniz bu öğeyi Microsoft'a iletebilir." />
+            <bt:Override Locale="uk-ua" Value="Допоможіть захистити всіх, надіславши підозрілі елементи для перевірки. Ваш адміністратор може переслати цей елемент до корпорації Майкрософт." />
+            <bt:Override Locale="vi-vn" Value="Giúp bảo vệ mọi người bằng cách gửi các mục đáng ngờ để xem xét. Người quản trị của bạn có thể chuyển tiếp mục này tới Microsoft." />
+            <bt:Override Locale="zh-cn" Value="通过提交可疑项目以供审阅，帮助确保所有人的安全。你的管理员可能会将此项转发给 Microsoft。" />
+            <bt:Override Locale="zh-tw" Value="提交可疑項目供檢閱，以協助保護所有人的安全。您的系統管理員可能會將此項目轉給 Microsoft。" />
+          </bt:String>
+        </bt:LongStrings>
+      </Resources>
+    </VersionOverrides>
+  </VersionOverrides>
+</OfficeApp>
