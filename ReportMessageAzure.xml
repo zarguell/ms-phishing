@@ -240,7 +240,7 @@
                 <bt:Image id="icon16Junk" DefaultValue="https://aka.ms/ipagave/images/Junk16.png" />
                 <bt:Image id="icon32Junk" DefaultValue="https://aka.ms/ipagave/images/Junk32.png" />
                 <bt:Image id="icon80Junk" DefaultValue="https://aka.ms/ipagave/images/Junk80.png" />
-                <bt:Image id="icon16Phishing" DefaultValue="ttps://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportMessage16.png" />
+                <bt:Image id="icon16Phishing" DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportMessage16.png" />
                 <bt:Image id="icon32Phishing" DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportMessage32.png " />
                 <bt:Image id="icon80Phishing" DefaultValue="https://raw.githubusercontent.com/zarguell/ms-phishing/main/assets/ReportMessage80.png" />
                 <bt:Image id="icon16NotJunk" DefaultValue="https://aka.ms/ipagave/images/NotJunk16.png" />
