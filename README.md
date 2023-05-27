@@ -19,4 +19,4 @@ Currently includes assets of the following sizes:
 
 AddIn Preview:
 
-[!AddIn](./assets/AddIn.png)
+![AddIn](./assets/AddIn.png)
