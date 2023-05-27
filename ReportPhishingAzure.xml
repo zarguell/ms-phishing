@@ -3,7 +3,7 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
   <!-- Begin Basic Settings: Add-in metadata, used for all versions of Office unless override provided. -->
   <!-- IMPORTANT! Id must be unique for your add-in, if you reuse this manifest ensure that you change this id to a new GUID. -->
-  <Id>3F32746A-0586-4C54-B8CE-D3B611C5B6C8</Id>
+  <Id>5D0E02A8-66D9-4D6F-9564-CC50E4E6F5A9</Id>
   <!--Version. Updates from the store only get triggered if there is a version change. -->
   <Version>1.0.1.2</Version>
   <ProviderName>Microsoft Corporation</ProviderName>
